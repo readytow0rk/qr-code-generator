@@ -1,87 +1,89 @@
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  QR CODE GENERATOR — INSTRUCTIONS
-  File: generate_qr.py
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔲 QR Code Generator
 
-WHAT YOU NEED INSTALLED
-───────────────────────
-• Python 3  →  https://www.python.org/downloads/
-• pip       →  comes with Python automatically
+Generate a permanent, self-hosted QR code for any URL — no third-party services, no expiry.
 
+---
 
-STEP 1 — INSTALL THE QR LIBRARY (one time only)
-────────────────────────────────────────────────
-Open your terminal and run:
+## 📋 Requirements
 
-    pip install qrcode[pil]
+| Requirement | Notes |
+|-------------|-------|
+| [Python 3](https://www.python.org/downloads/) | Download from python.org |
+| pip | Comes bundled with Python automatically |
 
-You only ever need to do this once.
+---
 
+## 🚀 Quick Start
 
-STEP 2 — CHANGE THE URL (optional)
-────────────────────────────────────
-Open generate_qr.py in Sublime Text.
-Find this line near the top:
+### Step 1 — Install the QR library *(one time only)*
 
-    URL = "https://mamacookin.com"
+```bash
+pip install qrcode[pil]
+```
 
-Replace the URL with whatever website you want.
-Save the file (Ctrl+S or Cmd+S).
+### Step 2 — Set your URL *(optional)*
 
+Open `generate_qr.py` and find this line near the top:
 
-STEP 3 — RUN IT
-───────────────
-In your terminal, navigate to the folder where
-generate_qr.py is saved, then run:
+```python
+URL = "https://mamacookin.com"
+```
 
-    python generate_qr.py
+Replace the URL with whatever website you want, then save the file.
 
-The QR code image will appear in the same folder
-as a file called:  my_qr_code.png
+### Step 3 — Run it
 
+Navigate to the folder containing `generate_qr.py` and run:
 
-STEP 4 — CHANGE OUTPUT FILENAME (optional)
-───────────────────────────────────────────
-In generate_qr.py, find this line:
+```bash
+python generate_qr.py
+```
 
-    OUTPUT_FILE = "my_qr_code.png"
+Your QR code will be saved in the same folder as **`my_qr_code.png`**.
 
-Change "my_qr_code.png" to whatever name you like.
-Example:  "new_menu_qr.png"
+### Step 4 — Change the output filename *(optional)*
 
+In `generate_qr.py`, find:
 
-DOES THE QR CODE EXPIRE?
-─────────────────────────
-NO. Your QR code never expires.
+```python
+OUTPUT_FILE = "my_qr_code.png"
+```
 
-Because you're generating it yourself (not using
-a third-party service), the QR code is just a
-pattern that permanently encodes your URL.
+Change `"my_qr_code.png"` to any name you like, e.g. `"new_menu_qr.png"`.
 
-It will stop working ONLY if:
-  • Your website (mamacookin.com) goes offline
-  • Your domain expires and you don't renew it
-  • The URL changes (e.g. you move to a new site)
+---
 
-As long as mamacookin.com is live, the QR works
-forever — even in 10 years.
+## ❓ Does the QR code expire?
 
+**No — it never expires.**
 
-TIPS FOR PRINTING
-─────────────────
-• Print at minimum 3x3 cm so phones can scan it
-• Don't stretch or squish the image — keep it square
-• Test it with your phone before printing in bulk
-• Both iPhone and Android camera apps scan it natively
-  (no extra app needed)
+Because you generate it yourself (not through a third-party service), the QR code is simply a pattern that permanently encodes your URL.
 
+It will only stop working if:
 
-QUICK REFERENCE
-───────────────
-To generate a new QR:
-  1. Edit URL = "..." in generate_qr.py
-  2. Save the file
-  3. Run:  python generate_qr.py
-  4. Done — my_qr_code.png is ready
+- 🔴 Your website goes offline
+- 🔴 Your domain expires and isn't renewed
+- 🔴 The URL changes (e.g. you move to a new site)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+As long as your site is live, the QR code works **forever** — even in 10 years.
+
+---
+
+## 🖨️ Tips for Printing
+
+- Print at a **minimum size of 3 × 3 cm** so phones can scan it reliably
+- **Keep it square** — don't stretch or squish the image
+- **Test with your phone** before printing in bulk
+- Works natively with both iPhone and Android camera apps — no extra app needed
+
+---
+
+## ⚡ Quick Reference
+
+```bash
+# 1. Edit the URL in generate_qr.py
+# 2. Save the file
+# 3. Run:
+python generate_qr.py
+# 4. Done — my_qr_code.png is ready
+```
